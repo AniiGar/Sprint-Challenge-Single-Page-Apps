@@ -34,6 +34,15 @@ main {
   margin: 0 auto;
 } */
 
-header h1 {
+/* header h1 {
   text-align: center;
+}
+
+.main-img {
+  height: 300px;
+  width: 70%;
+} */
+
+.navLink {
+  padding: 5px;
 }
