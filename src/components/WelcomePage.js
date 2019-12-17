@@ -1,5 +1,7 @@
 import React from "react";
 
+import Route from "react-router-dom";
+
 export default function WelcomePage() {
   return (
     <section className="welcome-page">
@@ -7,9 +9,12 @@ export default function WelcomePage() {
         <h1>Welcome to the ultimate fan site!</h1>
         <img
           className="main-img"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb-2kJpYDJGrWW2nJZ7jYFvc9DTGmw-qgM9gLlVe2uSwroOr52uA&s"
-          alt="Rick and Morty"
-        />
+          src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+          alt="Rick"
+        />        
+             
+        {/* <Route path='/CharaterList' component={CharacterList} />
+        <Route path='/Search' component={SearchForm} /> */}
       </header>
     </section>
   );

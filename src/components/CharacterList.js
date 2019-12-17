@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios'; 
-import { Link } from 'react-router-dom'; 
 
 import CharacterCard from './CharacterCard'
 
@@ -27,29 +26,22 @@ export default function CharacterList() {
 
   return (
     <section className="character-list">
-      {character.map( prop => (
-        <CharacterDetails key={prop.id} prop={prop} />
-      ))}
+      {character.map((prop, index) => {
+        return (
+          <div key={prop.id}>
+            <CharacterCard
+              key={index}
+              image={prop.image}
+              name={prop.name}
+              location={prop.location}
+              origin={prop.origin}
+              gender={prop.gender}
+              species={prop.species}
+              status={prop.status}
+            />
+          </div>
+        )
+      })}
     </section>
   );
-}
-
-function CharacterDetails({prop}) {
-
-  return (
-    <Link to={`/character/${prop.id}`}>
-      <div key={prop.id}>
-        <CharacterCard
-          key={prop.id}
-          image={prop.image}
-          name={prop.name}
-          location={prop.location}
-          origin={prop.origin}
-          gender={prop.gender}
-          species={prop.species}
-          status={prop.status}
-        />
-      </div>
-    </Link>
-  )
 }

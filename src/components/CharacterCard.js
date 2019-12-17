@@ -1,11 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 export default function CharacterCard(props) {
- 
-  console.log(props);
-
   return(
-    // <Link to={`/character/${CharacterCard.id}`}>
     <div>      
       <img src={props.image} alt={props.name} />
       <h3>{props.name}</h3>
@@ -16,6 +12,6 @@ export default function CharacterCard(props) {
       <p>Species: {props.species}</p>
       <p>Life Status: {props.status}</p>
     </div>
-    // </Link>
   );
 }
+
